@@ -137,23 +137,24 @@ header nav ul li a:hover {
 }
 
 form {
-    background-color: #000;
+    background-color: #C3B6A7;
     padding: 40px;
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    color: white;
+    color: #4A3C31;
 }
 
 form h2{
     font-size: 25px;
+    font-weight: bold;
 }
 
 form label {
     font-weight: bold;
-    color: white;
+    color: #4A3C31;
     display: block;
     margin-top: 20px;
 }
@@ -165,9 +166,10 @@ form input[type="text"]{
     border: none;
     border-bottom: 2px solid white;
     background-color: transparent;
-    color: white;
+    color: #4A3C31;
     outline: none;
 }
+
 form input[type="email"]{
     width: 97%;
     padding: 10px;
@@ -187,15 +189,15 @@ form select {
     border: none;
     border-bottom: 2px solid white;
     background-color: transparent;
-    color: white;
+    color: #4A3C31;
     outline: none;
 }
 form input[type="text"]::placeholder {
-    color: #ddd;
+    color: #4A3C31;
 }
 
 form input[type="email"]::placeholder {
-    color: #ddd;
+    color: #4A3C31;
 }
 
 form input[type="submit"] {
@@ -210,10 +212,11 @@ form input[type="submit"] {
     margin: 30px auto 0;
     width: 50%;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #6f45bd;
+    background-color: cyan;
 }
 option{
     background-color: #000;
