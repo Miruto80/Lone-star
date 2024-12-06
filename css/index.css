@@ -164,10 +164,6 @@ header nav ul li a:hover {
     height: 300px
 }
 
-.car img:hover {
-    transform: scale(1.1);
-}
-
 .car button {
   background-color: #000;
     color: #fff;
