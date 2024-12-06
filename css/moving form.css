@@ -178,8 +178,12 @@ form input[type="email"]{
     border: none;
     border-bottom: 2px solid white;
     background-color: transparent;
-    color: white;
+    color: #4A3C31;
     outline: none;
+    transition: border-bottom 0.6 ease;
+}
+form input:focus,select:focus{
+    border-bottom: 2px solid #4A3C31;
 }
 form select {
     width: 100%;
@@ -192,9 +196,16 @@ form select {
     color: #4A3C31;
     outline: none;
 }
+
+select option{
+    background-color: white;
+    color: black;
+}
+
 form input[type="text"]::placeholder {
     color: #4A3C31;
 }
+
 
 form input[type="email"]::placeholder {
     color: #4A3C31;

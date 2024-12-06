@@ -1,0 +1,241 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.6s ease;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00b2b7; /* Color del header */
+    transition: background-color 0.6s ease;
+}
+
+
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height: 180px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+header .logo-container h1 {
+    color:white;
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+
+
+header .logo-container .d-flex {
+    gap: 20px; /* Espaciado entre el toggle y los enlaces */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+    color: cyan; /* Color de los enlaces */
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra la imagen y el título horizontalmente */
+    }
+
+    header .logo-container img {
+        margin-right: 0; /* Elimina el margen derecho */
+        padding: 0;
+    }
+
+    header h1 {
+        text-align: center; /* Centra el texto del título */
+    }
+
+    header nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 10px 0;
+        display: block;
+        text-align: center;
+        color: white; /* Color del texto */
+    }
+
+    .redes-sociales {
+        flex-direction: column;
+    }
+
+    .redes-sociales a {
+        margin: 5px 0;
+    }
+
+    .legal {
+        margin-top: 10px;
+    }
+
+    #legal-button {
+        font-size: 14px;
+    }
+
+    #legal-content {
+        font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+    .experience-item {
+        flex: 1 1 calc(100% - 20px); /* Un elemento por fila en pantallas pequeñas */
+    }
+}
+}
+
+form {
+    background-color: #C3B6A7;
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    color: #4A3C31;
+}
+
+form h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form label {
+    font-weight: bold;
+    color: #4A3C31;
+    display: block;
+    margin-top: 20px;
+}
+form input[type="text"]{
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: #4A3C31;
+    outline: none;
+}
+
+form input[type="email"]{
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: #4A3C31;
+    outline: none;
+    transition: border-bottom 0.6 ease;
+}
+form input:focus,select:focus{
+    border-bottom: 2px solid #4A3C31;
+}
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: #4A3C31;
+    outline: none;
+}
+
+select option{
+    background-color: white;
+    color: black;
+}
+
+form input[type="text"]::placeholder {
+    color: #4A3C31;
+}
+
+
+form input[type="email"]::placeholder {
+    color: #4A3C31;
+}
+
+form input[type="submit"] {
+    background-color: #0782fa;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 30px auto 0;
+    width: 50%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: cyan;
+}
+option{
+    background-color: #000;
+    color: white;
+}
+
+.errorform {
+    color: red;
+    font-size: 0.9em;
+}
+
