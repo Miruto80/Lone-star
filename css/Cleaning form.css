@@ -206,7 +206,7 @@ form input[type="number"]{
     border: none;
     border-bottom: 2px solid white;
     background-color: transparent;
-    color: #4A3C31;
+    color: #000;
     outline: none;
     transition: border-bottom 0.6 ease;
 }
@@ -232,12 +232,12 @@ select option{
 }
 
 form input[type="text"]::placeholder {
-    color: #4A3C31;
+    color: #000;
 }
 
 
 form input[type="email"]::placeholder {
-    color: #4A3C31;
+    color: #000;
 }
 
 form input[type="submit"] {
@@ -264,7 +264,8 @@ option{
 }
 
 .errorform {
-    color: red;
+    color:black;
+    font-weight: bold;
     font-size: 0.9em;
 }
 
