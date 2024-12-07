@@ -35,26 +35,54 @@
             </div>
         </div>
     </header>
-    <form action="" method="POST" onsubmit="return validarenvio()">
-        <h2>Moving Service Details</h2>
+    <form action="" method="post" onsubmit="return validarenvio()">
+        <h2>Cleaning Service Details</h2>
 
-        <label for="houseType">House Type</label>
-        <select id="houseType" name="houseType" required>
+        <label for="cleaningType">Type of Cleaning</label>
+        <select id="cleaningType" name="cleaningType" required>
             <option value="" disabled selected>Select an option</option>
-            <option value="1-floor">1 Floor</option>
-            <option value="2-floors">2 Floors</option>
-            <option value="3-floors">3 Floors or more</option>
+            <option value="basic">Basic</option>
+            <option value="deep">Deep</option>
         </select>
 
-        <label for="heavyItems">Does the house have heavy items?</label>
-        <select id="heavyItems" name="heavyItems" required>
+        <label for="Movetype">Type of move</label>
+        <select name="Movetype" id="Movetype" required>
             <option value="" disabled selected>Select an option</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="move-in">Move In</option>
+            <option value="move-out">Move Out</option>
         </select>
-        <div id="heavyItemMessage" style="display: none; color: red;">
-            <p>We can proceed with the move without the heavy items.</p>
-        </div>
+
+        <label for="squareMeters">How many square meters?</label>
+        <input type="number" id="squareMeters" name="squareMeters" placeholder="Enter square meters" min="1">
+        <span id="ssquareMeters" class="errorform"></span>
+
+        <label for="rooms">How many rooms? (Max 10)</label>
+        <select name="rooms" id="rooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+        <label for="bathrooms">How many bathrooms? (Max 10)</label>
+        <select name="bathrooms" id="bathrooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
 
         <h2>Personal Details</h2>
 
@@ -69,22 +97,41 @@
         <input type="email" id="email" name="email" placeholder="Your email address">
         <span id="semail" class="errorform"></span>
         
-        <label for="currentAddress">Current Address</label>
-        <input type="text" id="currentAddress" name="currentAddress" placeholder="Address to move from" required>
+        <label for="Addresstoclean">Address to clean</label>
+        <input type="text" id="Addresstoclean" name="Addresstoclean" placeholder="Address to clean" required>
 
-        <label for="newAddress">New Address</label>
-        <input type="text" id="newAddress" name="newAddress" placeholder="Address to move to" required>
+        <h3>Extra Options</h3>
+<div class="d-flex flex-wrap gap-3 extra-options">
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraDishes">Clean dishes</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="dishes" id="extraDishes">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraFridge">Clean fridge</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="fridge" id="extraFridge">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraCabinets">Clean cabinets</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="cabinets" id="extraCabinets">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraLaundry">Do laundry</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="laundry" id="extraLaundry">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraOven">Clean oven</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="oven" id="extraOven">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraOrganization">Organization</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="organization" id="extraOrganization">
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label" for="extraWindows">Clean windows</label>
+        <input class="form-check-input" type="checkbox" name="extras[]" value="windows" id="extraWindows">
+    </div>
+</div>
 
-        <h2>Additional Options</h2>
-
-        <label for="packUnpack">Do you need packing or unpacking services?</label>
-        <select id="packUnpack" name="packUnpack">
-            <option value="" disabled selected>Select an option</option>
-            <option value="pack">Packing</option>
-            <option value="unpack">Unpacking</option>
-            <option value="both">Both</option>
-            <option value="none">None</option>
-        </select>
 
         <input type="submit" value="Submit">
     </form>
@@ -108,6 +155,14 @@ $("#phone").on("keyup", function () {
     validarkeyup(/^[0-9]{10,11}$/, $(this), $("#sphone"), "The format must be between 10 to 11 digits");
 });
 
+$("#squareMeters").on("keypress", function (e) {
+    validarkeypress(/^[0-9-\b]*$/, e);
+});
+
+$("#squareMeters").on("keyup", function () {
+    validarkeyup(/^[0-9]{1,11}$/, $(this), $("#ssquareMeters"),"Only numbers");
+});
+
 $("#email").on("keypress", function (e) {
     validarkeypress(/^[A-Za-z@_.0-9\b\u00f1\u00d1\u00E0-\u00FC-]*$/, e);
 });
@@ -129,6 +184,10 @@ $("#name").on("keyup", function () {
 function validarenvio() {
     if (validarkeyup(/^[0-9]{10,11}$/, $("#phone"), $("#sphone"), "The format must be between 10 to 11 digits") == 0) {
         alert("Error in phone");
+        return false;
+    }
+    if (validarkeyup(/^[0-9]{1,11}$/, $("#squareMeters"), $("#ssquareMeters"), "Only numbers") == 0) {
+        alert("Error in squareMeters");
         return false;
     }
     if (validarkeyup(/^[A-Za-z_0-9\u00f1\u00d1\u00E0-\u00FC-]{3,20}[@]{1}[A-Za-z0-9]{3,8}[.]{1}[A-Za-z]{3}$/, 

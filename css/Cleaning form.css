@@ -129,6 +129,20 @@ header nav ul li a:hover {
         font-size: 12px;
     }
 
+    .extra-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-check {
+        width: 100%;
+    }
+
+    .form-check-label {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+    }
+
     @media (max-width: 768px) {
     .experience-item {
         flex: 1 1 calc(100% - 20px); /* Un elemento por fila en pantallas pequeñas */
@@ -137,14 +151,14 @@ header nav ul li a:hover {
 }
 
 form {
-    background-color: #C3B6A7;
+    background-color: #00b2b7;
     padding: 40px;
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    color: #4A3C31;
+    color: white;
 }
 
 form h2{
@@ -154,10 +168,11 @@ form h2{
 
 form label {
     font-weight: bold;
-    color: #4A3C31;
+    color: white;
     display: block;
     margin-top: 20px;
 }
+
 form input[type="text"]{
     width: 97%;
     padding: 10px;
@@ -182,6 +197,20 @@ form input[type="email"]{
     outline: none;
     transition: border-bottom 0.6 ease;
 }
+
+form input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: #4A3C31;
+    outline: none;
+    transition: border-bottom 0.6 ease;
+}
+
 form input:focus,select:focus{
     border-bottom: 2px solid #4A3C31;
 }
@@ -237,5 +266,15 @@ option{
 .errorform {
     color: red;
     font-size: 0.9em;
+}
+
+.form-check-input {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* Espaciado entre las opciones */
+.form-check {
+    margin-bottom: 1rem;
 }
 
