@@ -9,132 +9,130 @@ body{
     transition: background-color 0.6s ease;
 }
 
+.pueh{
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.5)),url(../imagenes/Fondo1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  height: 600px;
+  color: yellow;
+}
+
 /* Estilo del header */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 20px; /* Espaciado interno horizontal */
     background-color: #C3B6A7; /* Color del header */
-    transition: background-color 0.6s ease;
+    transition: all 0.3s ease; /* Transiciones suaves */
+    height: 140px; /* Altura inicial */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden; /* Evita que los elementos se salgan */
+    box-sizing: border-box; /* Asegura que paddings y bordes estén incluidos en el tamaño total */
 }
 
+/* Ajuste para que las imágenes no se salgan */
+header .logo-container img {
+    height: 140px; /* Logo más grande inicialmente */
+    margin-right: 20px;
+}
 
-
+/* Ajuste del contenedor del logo y título */
 header .logo-container {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap; /* Evita que se desborden los elementos del contenedor */
+    overflow: hidden; /* Asegura que los elementos no salgan del contenedor */
 }
 
-header .logo-container img {
-    height: 180px; /* Tamaño del logo */
-    margin-right: 10px;
-}
-
+/* Ajuste del título */
 header .logo-container h1 {
     color: #4A3C31;
-    margin-bottom: 5px;
-    font-weight:bold;
+    font-size: 28px; /* Título más grande inicialmente */
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap; /* Evita que el texto se desborde y haga saltos de línea */
 }
 
+/* Ajuste del menú de navegación */
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espaciado entre elementos del menú */
+    align-items: center;
+    white-space: nowrap; /* Evita saltos de línea en el menú */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; 
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: cyan;
+}
 
 header .logo-container .d-flex {
     gap: 20px; /* Espaciado entre el toggle y los enlaces */
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: white; /* Color de los enlaces */
-    text-decoration: none;
-    font-weight: bold;
-    font-size:20px;
-    transition: color 0.3s ease;
-}
-header nav ul li a:hover {
-    color: cyan; /* Color de los enlaces */
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logo-container {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra la imagen y el título horizontalmente */
-    }
-
-    header .logo-container img {
-        margin-right: 0; /* Elimina el margen derecho */
-        padding: 0;
-    }
-
-    header h1 {
-        text-align: center; /* Centra el texto del título */
-    }
-
-    header nav {
-        width: 100%;
-        text-align: left;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    header nav ul li a {
-        width: 100%;
-        padding: 10px 0;
-        display: block;
-        text-align: center;
-        color: white; /* Color del texto */
-    }
-
-    .redes-sociales {
-        flex-direction: column;
-    }
-
-    .redes-sociales a {
-        margin: 5px 0;
-    }
-
-    .legal {
-        margin-top: 10px;
-    }
-
-    #legal-button {
-        font-size: 14px;
-    }
-
-    #legal-content {
-        font-size: 12px;
-    }
 
     @media (max-width: 768px) {
-    .experience-item {
-        flex: 1 1 calc(100% - 20px); /* Un elemento por fila en pantallas pequeñas */
-    }
-}
+        header {
+            flex-direction: column; /* Disposición vertical */
+            align-items: center;   /* Centra los elementos */
+            padding: 10px 15px;
+            height: auto;
+            position: static;
+        }
+    
+        header nav ul {
+            display: flex;
+            flex-direction: column; /* Enlaces en columna */
+            align-items: center;    /* Centra los enlaces */
+            gap: 10px;              /* Espaciado entre enlaces */
+            margin-top: 10px;       /* Separación debajo del header */
+        }
+    
+        header nav ul li {
+            margin: 0; /* Sin margen extra */
+        }
+    
+        header nav ul li a {
+            font-size: 18px; /* Tamaño reducido para pantallas pequeñas */
+        }
+    
+        /* Ajustes generales para el logo y título */
+        header .logo-container {
+            flex-direction: column; /* Alineación en columna */
+            align-items: center;
+        }
+    
+        header .logo-container img {
+            height: 100px; /* Tamaño más pequeño del logo */
+        }
+    
+        header .logo-container h1 {
+            font-size: 20px; /* Título más pequeño */
+            margin-top: 10px; /* Espaciado adicional */
+        }
+
+        #bimagen {
+            display: block; /* Asegura que se comporte como un bloque */
+            margin-top: 10px; /* Añade espacio entre los enlaces y el toggle */
+            margin-bottom: 10px;
+            width: auto; /* Ajusta automáticamente el ancho */
+            align-self: center; /* Centra el toggle debajo de los enlaces */
+        }
 }
 
 .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
