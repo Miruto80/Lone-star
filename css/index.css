@@ -147,12 +147,13 @@ header .logo-container .d-flex {
 }
 
 .Inicio h1{
-   font-size: 50px;
+   font-size: 40px;
    color: #fff;
 }
 
 .Inicio h3{
     color: yellow;
+    font-size: 25px;
  }
 
 .Inicio img{
@@ -160,11 +161,32 @@ header .logo-container .d-flex {
     margin: 0;
 }
 
-.col img{
-    height: 100px;
-    width: 100px;
-    margin: 0;
-}
+.img-custom {
+    width: 100%; /* Se adapta al tamaño de la columna */
+    height: 180px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen para que rellene el espacio definido */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+  }
+
+  .content-box {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  .content-box h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .content-box p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
 
 .caja_img {
     display: flex;
