@@ -271,3 +271,61 @@ header .logo-container .d-flex {
   color: #000; /* Color al pasar el mouse */
   transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
 }
+
+.info-section {
+    background: url(../imagenes/camion.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Suaviza la transición entre secciones */
+}
+
+.info-section h2 {
+    margin-top: 0;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+#pinfo{
+    color: white;
+}
+.info-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.info-section .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info-section .feature {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
+.info-section .feature:hover {
+    transform: translateY(-5px); /* Le da un pequeño efecto de levantamiento */
+}
+
+.info-section .feature h3 {
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.info-section .feature p {
+    text-align:left;
+    font-size: 16px;
+}
