@@ -19,7 +19,7 @@ header {
     padding: 0 20px; /* Espaciado interno horizontal */
     background-color: #C3B6A7; /* Color del header */
     transition: all 0.3s ease; /* Transiciones suaves */
-    height: 140px; /* Altura inicial */
+    height: auto; /* Altura inicial */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -29,8 +29,7 @@ header {
 
 /* Ajuste para que las imágenes no se salgan */
 header .logo-container img {
-    height: 140px; /* Logo más grande inicialmente */
-    margin-right: 20px;
+    height: 130px; /* Logo más grande inicialmente */
 }
 
 /* Ajuste del contenedor del logo y título */
@@ -114,8 +113,7 @@ header .logo-container .d-flex {
         }
     
         header .logo-container h1 {
-            font-size: 20px; /* Título más pequeño */
-            margin-top: 10px; /* Espaciado adicional */
+            font-size: 30px; /* Título más pequeño */
         }
 
         #bimagen {
