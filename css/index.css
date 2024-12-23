@@ -271,7 +271,7 @@ header .logo-container .d-flex {
 }
 
 .info-section {
-    background: url(../imagenes/camion.jpeg);
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)),url(../imagenes/camion.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
