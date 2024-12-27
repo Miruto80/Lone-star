@@ -365,42 +365,74 @@ header .logo-container .d-flex {
     font-size: 16px;
 }
 
-.cleaning-process {
+.moving-process {
     padding: 50px 20px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-.cleaning-process .container {
-    max-width: 1200px;
-    margin: auto;
-}
 
-.cleaning-process .section-title {
+.moving-process .section-title {
     text-align: center;
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 30px;
 }
 
-.cleaning-process .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.moving-process .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 0 20px; /* Agrega espacio horizontal para dispositivos pequeños */
+    text-align: center; /* Alinea el contenido del contenedor al centro */
 }
 
-.cleaning-process .step {
+.moving-process .steps {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Mantiene los pasos en columna */
+    gap: 30px; /* Espaciado entre pasos */
 }
 
-.cleaning-process .step-number {
+.moving-process .step {
+    display: flex;
+    flex-direction: column; /* Cambia a disposición en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre elementos dentro del paso */
+}
+
+.moving-process .step-number {
     font-size: 2rem;
     color: white;
+    background-color: #333; /* Color de fondo para destacar */
+    padding: 10px;
+    border-radius: 50%; /* Hace el número circular */
+    width: 50px; /* Tamaño consistente */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el texto dentro del círculo */
 }
 
-.cleaning-process .step-description {
-    margin-left: 20px;
-    font-size: 1.5rem;
+.moving-process .step-content {
+    display: flex;
+    flex-direction: column; /* Mantiene el título y la lista en columna */
+    gap: 10px; /* Espaciado entre el título y la lista */
+    text-align: center; /* Centra el texto dentro del contenido */
+}
+
+.moving-process .step-description {
+    font-size: 2.2rem;
     color: #555;
+}
+
+.moving-process ul {
+    margin: 0 auto; /* Centra la lista dentro de su contenedor */
+    padding-left: 0; /* Elimina el padding lateral */
+    font-size: 1.8rem;
+    list-style: disc; /* Muestra los bullet points */
+    text-align: left; /* Opcional: alinea los elementos de la lista a la izquierda */
+    max-width: 600px; /* Limita el ancho para que sea más legible */
+}
+
+.moving-process li{
+    margin-bottom: 20px;
 }
