@@ -436,3 +436,7 @@ header .logo-container .d-flex {
 .moving-process li{
     margin-bottom: 20px;
 }
+
+.hidden{
+    display: none;
+}
