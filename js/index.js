@@ -21,7 +21,7 @@ function cambiarlimpieza() {
 	B.style.background = "#00b2b7";
 	h1.textContent = "Cleaning with Care";
 	h1.style.color = "white";
-	body.style.background = "#19e6e8";
+	body.style.background = "#6af6f6";
 	cartas.forEach(carta => {
 		if (carta.classList.contains("cleaning-card") || carta.classList.contains("cleaning-service")) {
             carta.classList.remove("hidden");

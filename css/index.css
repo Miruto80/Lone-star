@@ -316,6 +316,7 @@ header .logo-container .d-flex {
     padding: 60px 20px;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Suaviza la transición entre secciones */
+    margin-bottom: 20px;
 }
 
 .info-section h2 {
