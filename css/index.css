@@ -54,7 +54,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px; /* Espaciado interno horizontal */
-    background-color: #C3B6A7; /* Color del header */
+    background-color: #ae9b89; /* Color del header */
     transition: all 0.3s ease; /* Transiciones suaves */
     height: auto; /* Altura inicial */
     position: sticky;
@@ -101,7 +101,7 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px; 
+    font-size: 17px; 
     transition: color 0.3s ease;
 }
 
@@ -442,6 +442,7 @@ header .logo-container .d-flex {
 .moving-process .step-description {
     font-size: 2.2rem;
     color: #555;
+    font-weight: bold;
 }
 
 .moving-process ul {

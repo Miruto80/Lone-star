@@ -14,8 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #C3B6A7; /* Color del header */
-    transition: background-color 0.6s ease;
+    background-color: #ae9b89; /* Color del header */
     height: auto;
 }
 
@@ -34,6 +33,7 @@ header .logo-container h1 {
     color: #4A3C31;
     margin-bottom: 5px;
     font-weight:bold;
+    font-size: 28px;
 }
 
 
@@ -56,7 +56,7 @@ header nav ul li a {
     color: white; /* Color de los enlaces */
     text-decoration: none;
     font-weight: bold;
-    font-size:20px;
+    font-size:18px;
     transition: color 0.3s ease;
 }
 header nav ul li a:hover {
