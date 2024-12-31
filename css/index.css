@@ -67,6 +67,9 @@ header {
 /* Ajuste para que las imágenes no se salgan */
 header .logo-container img {
     height: 130px; /* Logo más grande inicialmente */
+    width: 210px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Ajuste del contenedor del logo y título */
@@ -84,6 +87,7 @@ header .logo-container h1 {
     margin: 0;
     font-weight: bold;
     white-space: nowrap; /* Evita que el texto se desborde y haga saltos de línea */
+    padding: 0;
 }
 
 /* Ajuste del menú de navegación */
@@ -107,6 +111,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: cyan;
+    text-decoration: none;
 }
 
 header .logo-container .d-flex {
