@@ -120,6 +120,9 @@ header .logo-container .d-flex {
 
 
     @media (max-width: 768px) {
+        html{
+            width: 100%;
+        }
         header {
             flex-direction: column; /* Disposición vertical */
             align-items: center;   /* Centra los elementos */
