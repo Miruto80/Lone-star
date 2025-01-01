@@ -194,7 +194,7 @@ header .logo-container .d-flex {
 }
 
 .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
-.toggle.ios .toggle-handle { border-radius: 20rem; }
+.toggle.ios .toggle-handle { border-radius: 20rem; width: 50px; transition: color 0.3s ease; background-color: #00b2b7;}
 
 
 .Inicio{
