@@ -120,9 +120,6 @@ header .logo-container .d-flex {
 
 
     @media (max-width: 768px) {
-        html{
-            width: 100%;
-        }
         header {
             flex-direction: column; /* Disposición vertical */
             align-items: center;   /* Centra los elementos */
@@ -171,6 +168,9 @@ header .logo-container .d-flex {
 
         .Inicio{
             flex-direction: column;
+        }
+        .car{
+            width: 100%;
         }
         .redes-sociales {
             flex-direction: column;
@@ -266,12 +266,14 @@ header .logo-container .d-flex {
 }
 
 .car img {
+    max-width: 95%;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     width: 400px;
-    height: 300px
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Opcional: agrega un sombreado */
 }
 
 .car button {
