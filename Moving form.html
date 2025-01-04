@@ -29,8 +29,7 @@
                     <ul class="d-flex m-0">
                         <li><a href="index.html"><b>Home</b></a></li>
                         <li><a href="#contact"><b>Contact Us</b></a></li>
-                        <li><a href="Apartment form.html">Apartment</a></li>
-                        <li><a href="#">House</a></li>
+                        <li><a href="#">Moving</a></li>
                         <li><a href="Cleaning form.html">Cleaning</a></li>
                         <li><a href="https://usedcarsintexas.com/">Want to buy a car?</a></li>
                     </ul>
@@ -38,9 +37,16 @@
             </div>
         </div>
     </header>
-    <form action="https://formspree.io/f/xrbgvbde" method="POST" onsubmit="return validarenvio()">
+    <form action="https://formspree.io/f/xzzzkgjg" method="POST" onsubmit="return validarenvio()">
         <h2>Moving Service Details</h2>
 
+        <label for="Election">Choose de type of moving</label>
+        <select id="Election" name="Election" onchange="casaoapartamento()" required >
+            <option value="" disabled selected>Select an option</option>
+            <option value="Apartment">Apartment</option>
+            <option value="House">House</option>
+        </select>
+       <div class="House-options hidden">
         <label for="houseType">House Type</label>
         <select id="houseType" name="houseType" required>
             <option value="" disabled selected>Select an option</option>
@@ -58,6 +64,38 @@
         <div id="heavyItemMessage" style="display: none; color: red;">
             <p>We can proceed with the move without the heavy items.</p>
         </div>
+     </div>
+    
+     <div class="apartment-options hidden">
+        <label for="floor-count">Number of floors:</label>
+        <select id="floor-count" name="floorCount" onchange="showFloorNumberOption()">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="more-than-3">More than 3</option>
+        </select>
+    
+        <div id="floor-number-option" style="display: none;">
+          <label for="floor-number">Floor number:</label>
+          <input type="number" id="floor-number" name="floorNumber" min="1"/>
+        </div>
+    
+        <label for="access">Access:</label>
+        <select id="access" name="access">
+          <option value="elevator">Elevator</option>
+          <option value="stairs">Stairs</option>
+        </select>
+     <label for="heavyItems2">Does the Appartment have heavy items?</label>
+     <select id="heavyItems2" name="heavyItems2" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+     </select>
+     <div id="heavyItemMessage2" style="display: none; color: red;">
+        <p>We can proceed with the move without the heavy items.</p>
+     </div>
+
+     </div>
 
         <h2>Personal Details</h2>
 
@@ -102,6 +140,60 @@
             }
         });
 
+        $("#heavyItems2").on("change", function() {
+            if ($(this).val() === "yes") {
+                $("#heavyItemMessage2").show();
+            } else {
+                $("#heavyItemMessage2").hide();
+            }
+        });
+
+        function casaoapartamento() {
+    let Eleccion = document.getElementById("Election").value;
+    let housediv = document.querySelector(".House-options");
+    let apartmentdiv = document.querySelector(".apartment-options");
+
+    if (Eleccion === "House") {
+        housediv.classList.remove("hidden");
+        apartmentdiv.classList.add("hidden");
+
+        // Habilitar campos de "House-options"
+        housediv.querySelectorAll("select, input").forEach((field) => {
+            field.disabled = false;
+        });
+
+        // Deshabilitar campos de "Apartment-options"
+        apartmentdiv.querySelectorAll("select, input").forEach((field) => {
+            field.disabled = true;
+        });
+    } else if (Eleccion === "Apartment") {
+        housediv.classList.add("hidden");
+        apartmentdiv.classList.remove("hidden");
+
+        // Habilitar campos de "Apartment-options"
+        apartmentdiv.querySelectorAll("select, input").forEach((field) => {
+            field.disabled = false;
+        });
+
+        // Deshabilitar campos de "House-options"
+        housediv.querySelectorAll("select, input").forEach((field) => {
+            field.disabled = true;
+        });
+    }
+}
+
+
+
+        function showFloorNumberOption() {
+  const floorCount = document.getElementById("floor-count").value;
+  const floorNumberOption = document.getElementById("floor-number-option");
+
+  if (floorCount === "more-than-3") {
+    floorNumberOption.style.display = "block";
+  } else {
+    floorNumberOption.style.display = "none";
+  }
+}
         // Validation functions
         $("#phone").on("keypress", function (e) {
     validarkeypress(/^[0-9-\b]*$/, e);
