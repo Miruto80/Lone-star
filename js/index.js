@@ -60,7 +60,7 @@ function cambiarlimpieza() {
 
 function cambiarmudanza(){
 	B.style.background = "#ae9b89";
-	h1.textContent = "Moving Made Simple";
+	h1.textContent = "We Make Moving Easy";
 	h1.style.color = "#4A3C31";
 	body.style.background = "#dcd5cc";
 	cartas.forEach(carta => {
