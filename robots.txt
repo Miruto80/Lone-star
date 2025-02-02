@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Allow: /
-Sitemap: https://www.usedcars.com/sitemap.xml
+Sitemap: https://www.lonestarmoves.com/sitemap.xml
