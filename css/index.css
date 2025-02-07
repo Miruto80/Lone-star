@@ -169,6 +169,16 @@ header .logo-container .d-flex {
         .Inicio{
             flex-direction: column;
         }
+        .Inicio h2{
+            font-size: 25px !important;
+        }
+
+        .Inicio h3{
+            font-size: 20px !important;
+         }
+         .Inicio img{
+            height: 200px !important;
+         }
         .car{
             width: 100%;
         }
