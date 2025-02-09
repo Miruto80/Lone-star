@@ -354,7 +354,7 @@
   <section id="reviewsList">
   <h3 class="text-center">Recent Reviews</h3>
   <?php
-   $conn = new mysqli('localhost', 'root', '', 'reviews');
+  $conn = new mysqli('localhost', 'u417714339_Lonestarmoves', 'Basededatos12.', 'u417714339_review');
    if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
    }
