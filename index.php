@@ -28,30 +28,33 @@
         </div>
     </div>
     
-      <header id="Barra">
-        <div class="logo-container d-flex justify-content-between align-items-center w-100">
-            <div class="d-flex flex-column flex-sm-row align-items-center">
-                <a href="index.html">
-                <img class="imagen" src="imagenes/Logo principal3.png" alt="Lone star logo" title="Lone star - we Make Moving Easy">
+    <header id="Barra">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+              <img src="imagenes/Logo principal3.png" alt="Logo lonestar" width="210" height="110" class="d-inline-block align-text-top">
             </a>
-                <h1 id="Titulo" class="mb-0"><b>We Make Moving Easy</b></h1>
-            </div>
+            <h1 class="navbar-brand fs-4 d-none d-sm-inline d-lg-inline fs-lg-2" id="Titulo"><b>We make moving easy</b></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
             
-            <div class="d-flex align-items-center"> 
-                <nav>
-                    <ul class="d-flex m-0">
-                        <li><a href="#top-bar"><b>Home</b></a></li>
-                        <li><a href="#contact"><b>Contact Us</b></a></li>
-                        <li><a href="Moving form.html">Moving</a></li>
-                        <li><a href="Cleaning form.html">Cleaning</a></li>
-                        <input type="checkbox" data-toggle="toggle" 
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a> </li>
+                <li class="nav-item"><a class="nav-link" href="Reviews.php">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="Moving form.html">Moving</a></li>
+                <li class="nav-item"><a class="nav-link" href="Cleaning form.html">Cleaning</a></li>
+                <input type="checkbox" data-toggle="toggle" 
                   data-on="Moving" data-off="Cleaning" 
                   data-style="ios" data-width="180" id="bimagen">
-                    </ul>
-                </nav>
+              </ul>
             </div>
-        </div>
-    </header>
+          </div>
+        </nav>
+      </header>
+
     <section class="Inicio">
         <div class="text-center">
         <h2>Exceptional moves and cleanings, stress-free experiences <br> Lone Star delivers excellence!</h2>
@@ -292,45 +295,7 @@
                    </div>
                </div>
            </div>
-           <div class="car">
-               <div class="car-images">
-                 <img src="imagenes/cajas.jpeg" alt="boxes">
-                   <img src="imagenes/Reseñas (7).jpeg" alt="review">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
-           <div class="car">
-               <div class="car-images">
-                 <img src="imagenes/camion reseña.jpeg" alt="truck">
-                   <img src="imagenes/Reseñas (4).jpeg" alt="review">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
-           <div class="car">
-               <div class="car-images">
-                 <img src="imagenes/Bajando reseña.jpeg" alt="Moving">
-                   <img src="imagenes/Reseñas (2).jpeg" alt="review">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
+           
            <div class="car hidden cleaning-card">
                <div class="car-images">
                  <img src="imagenes/Limpiezas 2 (2).jpeg" alt="Before">
@@ -385,6 +350,35 @@
            </div>
           </div>
       </section>
+
+  <section id="reviewsList">
+  <h3 class="text-center">Recent Reviews</h3>
+  <?php
+   $conn = new mysqli('localhost', 'root', '', 'reviews');
+   if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+   }
+          $result = $conn->query("SELECT name, rating, review, created_at FROM reviews ORDER BY created_at DESC LIMIT 3");
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $stars = str_repeat('★', $row['rating']) . str_repeat('☆', 5 - $row['rating']);
+              
+              // Formatear la fecha a un formato más amigable (February 9, 2025)
+              $created_at = date("F j, Y", strtotime($row['created_at']));
+              
+              echo "<div>
+                      <strong>" . htmlspecialchars($row['name']) . " <span class='star-rating'>($stars)</span></strong>
+                      <p>" . htmlspecialchars($row['review']) . "</p>
+                      <small>Reviewed on: $created_at</small>
+                    </div>";
+            }
+          } else {
+            echo "<p>No reviews yet. Be the first to leave one!</p>";
+          }
+          $conn->close();
+          ?>
+<button onclick="location.href='Reviews.php'">Leave a review here</button>
+</section>
      
       <section class="moving-process">
         <div class="container">
