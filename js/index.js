@@ -1,4 +1,50 @@
-document.addEventListener("DOMContentLoaded", carga);
+function prevImage(button) {
+    const carDiv = button.closest('.car');
+    const images = carDiv.querySelectorAll('.car-images img');
+    let currentIndex = Array.from(images).findIndex(img => img.style.display === 'block');
+
+    images[currentIndex].style.display = 'none';
+    if (currentIndex === 0) {
+        images[images.length - 1].style.display = 'block';
+    } else {
+        images[currentIndex - 1].style.display = 'block';
+    }
+}
+
+function nextImage(button) {
+    const carDiv = button.closest('.car');
+    const images = carDiv.querySelectorAll('.car-images img');
+    let currentIndex = Array.from(images).findIndex(img => img.style.display === 'block');
+
+    images[currentIndex].style.display = 'none';
+    if (currentIndex === images.length - 1) {
+        images[0].style.display = 'block';
+    } else {
+        images[currentIndex + 1].style.display = 'block';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carDivs = document.querySelectorAll('.car');
+
+    carDivs.forEach(carDiv => {
+        const images = carDiv.querySelectorAll('.car-images img');
+        images.forEach((img, index) => {
+            if (index === 0) {
+                img.style.display = 'block'; // Muestra solo la primera imagen
+            } else {
+                img.style.display = 'none'; // Oculta todas las demás imágenes
+            }
+        });
+    });
+});
+
+document.getElementById('legal-button').addEventListener('click', function () {
+    const legalContent = document.getElementById('legal-content');
+    legalContent.classList.toggle('show');
+});
+
+/*document.addEventListener("DOMContentLoaded", carga);
 function carga() {
     let b = document.getElementById("bimagen");
     let B = document.getElementById("Barra");
@@ -118,49 +164,4 @@ function cambiarmudanza(){
 }
 
 }
-
-function prevImage(button) {
-    const carDiv = button.closest('.car');
-    const images = carDiv.querySelectorAll('.car-images img');
-    let currentIndex = Array.from(images).findIndex(img => img.style.display === 'block');
-
-    images[currentIndex].style.display = 'none';
-    if (currentIndex === 0) {
-        images[images.length - 1].style.display = 'block';
-    } else {
-        images[currentIndex - 1].style.display = 'block';
-    }
-}
-
-function nextImage(button) {
-    const carDiv = button.closest('.car');
-    const images = carDiv.querySelectorAll('.car-images img');
-    let currentIndex = Array.from(images).findIndex(img => img.style.display === 'block');
-
-    images[currentIndex].style.display = 'none';
-    if (currentIndex === images.length - 1) {
-        images[0].style.display = 'block';
-    } else {
-        images[currentIndex + 1].style.display = 'block';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const carDivs = document.querySelectorAll('.car');
-
-    carDivs.forEach(carDiv => {
-        const images = carDiv.querySelectorAll('.car-images img');
-        images.forEach((img, index) => {
-            if (index === 0) {
-                img.style.display = 'block'; // Muestra solo la primera imagen
-            } else {
-                img.style.display = 'none'; // Oculta todas las demás imágenes
-            }
-        });
-    });
-});
-
-document.getElementById('legal-button').addEventListener('click', function () {
-    const legalContent = document.getElementById('legal-content');
-    legalContent.classList.toggle('show');
-});
+*/

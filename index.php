@@ -45,10 +45,9 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a> </li>
                 <li class="nav-item"><a class="nav-link" href="Reviews.php">Reviews</a></li>
                 <li class="nav-item"><a class="nav-link" href="Moving form.html">Moving</a></li>
-                <li class="nav-item"><a class="nav-link" href="Cleaning form.html">Cleaning</a></li>
-                <input type="checkbox" data-toggle="toggle" 
+             <!--<input type="checkbox" data-toggle="toggle" 
                   data-on="Moving" data-off="Cleaning" 
-                  data-style="ios" data-width="180" id="bimagen">
+                  data-style="ios" data-width="180" id="bimagen"> -->
               </ul>
             </div>
           </div>
@@ -76,20 +75,6 @@
                     Click to fill out the form and plan your move easily!"</p>
                 </div>
                 <button onclick="location.href='Moving form.html'">Get a free quote</button>
-            </div>
-        </div>
-        <div class="car hidden cleaning-card">
-            <div class="car-images">
-                <img src="imagenes/cleanliness-2799496_640.jpg" alt="Cleaning">
-            </div>
-            
-            <div class="car-info">
-                <h3>Cleaning your house/apartment</h3>
-                <div>
-                    <p>"Need a sparkling clean space? <br> 
-                        Click here to fill out the form and schedule <br> your cleaning service!"</p>
-                </div>
-                <button onclick="location.href='Cleaning form.html'">Plan the cleaning with us</button>
             </div>
         </div>
      </section>
@@ -158,55 +143,6 @@
               <img src="imagenes/Oficina.webp" alt="Office moves" class="img-custom mb-3">
               <h5>Office moves</h5>
               <p>We ensure smooth and secure relocations for your office equipment and furniture.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/hands-washing-dish-with-sponge.jpg" alt="Clean dishes" class="img-custom mb-3">
-              <h5>Clean Dishes</h5>
-              <p>We ensure all dishes are spotless and ready for use.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/Nevera.webp" alt="Clean fridge" class="img-custom mb-3">
-              <h5>Clean Fridge</h5>
-              <p>Thorough cleaning and organizing of your refrigerator.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/Limpieza (6).jpeg" alt="Clean cabinets" class="img-custom mb-3">
-              <h5>Clean Cabinets</h5>
-              <p>Deep cleaning and organization of kitchen cabinets.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/Laundry.jpg" alt="Do laundry" class="img-custom mb-3">
-              <h5>Do Laundry</h5>
-              <p>Professional laundry services for clean and fresh clothes.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/Limpieza (3).jpeg" alt="Clean oven" class="img-custom mb-3">
-              <h5>Clean Oven</h5>
-              <p>Expert oven cleaning for spotless and grease-free results.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/Organizacion.jpg" alt="Organization" class="img-custom mb-3">
-              <h5>Organization</h5>
-              <p>Decluttering and organizing services for your spaces.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-4 we-do hidden cleaning-service">
-            <div class="content-box">
-              <img src="imagenes/ventana.jpg" alt="Clean windows" class="img-custom mb-3">
-              <h5>Clean Windows</h5>
-              <p>Crystal-clear window cleaning services.</p>
             </div>
           </div>
         </div>
@@ -295,66 +231,13 @@
                    </div>
                </div>
            </div>
-           
-           <div class="car hidden cleaning-card">
-               <div class="car-images">
-                 <img src="imagenes/Limpiezas 2 (2).jpeg" alt="Before">
-                 <img src="imagenes/Limpiezas 2 (1).jpeg" alt="After">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
-           <div class="car hidden cleaning-card">
-               <div class="car-images">
-                 <img src="imagenes/Limpiezas 2 (8).jpeg" alt="Before">
-                 <img src="imagenes/Limpiezas 2 (4).jpeg" alt="After">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
-           <div class="car hidden cleaning-card">
-               <div class="car-images">
-                 <img src="imagenes/Limpiezas 2 (7).jpeg" alt="Before">
-                   <img src="imagenes/Limpiezas 2 (6).jpeg" alt="After">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
-           <div class="car hidden cleaning-card">
-               <div class="car-images">
-                 <img src="imagenes/Limpiezas 2 (3).jpeg" alt="Before">
-                 <img src="imagenes/Limpiezas 2 (5).jpeg" alt="After">
-               </div>
-               
-               <div class="car-info">
-                   <div class="car-controls">
-                       <button class="arrow" onclick="prevImage(this)">&#9664;</button>
-                       <button class="arrow" onclick="nextImage(this)">&#9654;</button>
-                   </div>
-               </div>
-           </div>
           </div>
       </section>
 
   <section id="reviewsList">
   <h3 class="text-center">Recent Reviews</h3>
   <?php
-  $conn = new mysqli('localhost', 'u417714339_Lonestarmoves', 'Basededatos12.', 'u417714339_review');
+  $conn = new mysqli('localhost', 'root', '', 'reviews');
    if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
    }
