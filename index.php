@@ -237,8 +237,8 @@
   <section id="reviewsList">
   <h3 class="text-center">Recent Reviews</h3>
   <?php
-  $conn = new mysqli('localhost', 'root', '', 'reviews');
-   if ($conn->connect_error) {
+  $conn = new mysqli('localhost', 'u417714339_Lonestarmoves', 'Basededatos12.', 'u417714339_review');
+  if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
    }
           $result = $conn->query("SELECT name, rating, review, created_at FROM reviews ORDER BY created_at DESC LIMIT 3");
